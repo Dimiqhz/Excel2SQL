@@ -12,8 +12,12 @@ def load_file(path):
                 try:
                     if path.endswith('.xls'):
                         xlsx_path = path.replace('.xls', '.xlsx')
-                        df = pd.read_excel(path)
-                        df.to_excel(xlsx_path, index=False) 
+                        xls = pd.ExcelFile(path)
+                        
+                        with pd.ExcelWriter(xlsx_path) as writer:
+                            for sheet_name in xls.sheet_names:
+                                df = pd.read_excel(xls, sheet_name=sheet_name)
+                                df.to_excel(writer, sheet_name=sheet_name, index=False) 
                         print(Fore.GREEN + '✔' + Fore.WHITE + " | The .xls file has been converted to .xlsx successfully!")
                         path = xlsx_path
 
