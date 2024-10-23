@@ -31,9 +31,9 @@ def generate_sql_from_excel(wb):
         else:
             selected_columns = columns
 
+        new_column_names = {}
         rename_choice = input(Fore.LIGHTBLUE_EX + "→" + Fore.WHITE + " | Do you want to rename any columns? (yes/no): ").strip().lower()
 
-        new_column_names = {}
         if rename_choice == 'yes':
             for col in selected_columns:
                 new_name = input(Fore.LIGHTBLUE_EX + f"→ {Fore.WHITE} | Enter new name for column '{col}' (or press Enter to keep the same): ")
