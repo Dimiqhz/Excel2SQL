@@ -52,6 +52,8 @@ This program allows users to upload Excel files, select sheets and columns, and 
 6. **Generating SQL**:
     - After all prompts are completed, the program will create a `.sql` file in the current directory.
 
+<img src="screenshots/image.png">
+
 ## Notes
 
 - Ensure that the Excel file contains headers in the first row, as these will be used as column names.
