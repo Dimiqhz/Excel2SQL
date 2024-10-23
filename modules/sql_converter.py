@@ -1,5 +1,5 @@
 from colorama import Fore
-
+ 
 def generate_sql_from_excel(wb):
     sheetnames = wb.sheetnames
     selected_sheet = input(Fore.LIGHTBLUE_EX + "→" + Fore.WHITE + " | Select a sheet name from the above list: ")
