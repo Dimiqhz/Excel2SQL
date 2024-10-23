@@ -44,15 +44,15 @@ This program allows users to upload Excel files, select sheets and columns, and 
 
 4. **Selecting Columns**:
     - The program will ask if you want to select specific columns for transfer. Answer `yes` or `no`.
-    - If `yes`, enter the names of the columns separated by commas.
+    - If `yes`, enter the names of the columns separated by commas. Only the selected columns will be considered for renaming and data insertion.
 
 5. **Renaming Columns**:
-    - The program will ask if you want to rename the selected columns. If yes, enter new names for each column or leave it blank to keep the old names.
+    - The program will ask if you want to rename the selected columns. If yes, you can only rename those columns that you have selected. Enter new names for each column or leave it blank to keep the old names.
 
 6. **Generating SQL**:
     - After all prompts are completed, the program will create a `.sql` file in the current directory.
 
-<img src="screenshots/image.png">
+![Screenshot](screenshots/image.png)
 
 ## Notes
 
