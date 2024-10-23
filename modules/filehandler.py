@@ -1,14 +1,22 @@
 import os
 from openpyxl import load_workbook
+import pandas as pd
 from colorama import Fore
 
 def load_file(path):
     wb = None 
 
-    if(path.endswith(('.xls', '.xlsx'))):
-        if(os.path.exists(path)):
-            if(os.path.isfile(path)):
-                try: 
+    if path.endswith(('.xls', '.xlsx')):
+        if os.path.exists(path):
+            if os.path.isfile(path):
+                try:
+                    if path.endswith('.xls'):
+                        xlsx_path = path.replace('.xls', '.xlsx')
+                        df = pd.read_excel(path)
+                        df.to_excel(xlsx_path, index=False) 
+                        print(Fore.GREEN + '✔' + Fore.WHITE + " | The .xls file has been converted to .xlsx successfully!")
+                        path = xlsx_path
+
                     wb = load_workbook(path)
                     print(Fore.GREEN + '✔' + Fore.WHITE + " | The file has been successfully uploaded!")
                     print(Fore.LIGHTBLUE_EX + '→' + Fore.WHITE + ' | Found workbooks on file: ' + ", ".join(map(str, wb.sheetnames)))
