@@ -17,7 +17,7 @@ This program allows users to upload Excel files, select sheets and columns, and 
     ```
 4. **Install the required libraries**:
     ```bash
-    pip install openpyxl colorama
+    pip install openpyxl colorama pandas
     ```
 
 ## Running the Program
