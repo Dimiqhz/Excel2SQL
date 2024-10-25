@@ -1,4 +1,4 @@
-# Instructions for Using the Excel to SQL Generator Program
+# Instructions for Using the Excel to SQL Converter Program
 
 ## How the Program Works
 
